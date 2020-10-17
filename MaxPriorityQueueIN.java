@@ -1,4 +1,3 @@
-package heap;
 
 public interface MaxPriorityQueueIN <T> {
 	

@@ -1,5 +1,3 @@
-package heap;
-
 import java.util.ArrayList;
 
 public class Heap<Integer> {
