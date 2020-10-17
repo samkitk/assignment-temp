@@ -27,11 +27,11 @@ public class MaxPriorityQueue extends MaxHeap implements MaxPriorityQueueIN<Inte
 	public Integer ExtractMax() {
             // TODO Auto-generated method stub
             Integer max = null;
-            if(heap_size < 1) System.out.println("Heap Underflow!");
+            if(heap_size-1 < 1) System.out.println("Heap Underflow!");
             else
             {
                 max = array.get(0);
-                array.set(0, array.get(heap_size));
+                array.set(0, array.get(heap_size-1));
                 heap_size--;
                 MaxHeapify(array, 0);
             }
@@ -39,7 +39,7 @@ public class MaxPriorityQueue extends MaxHeap implements MaxPriorityQueueIN<Inte
 	}
 
 	@Override
-	public void IncreaseKey(Integer x, int k) {
+	public void IncreaseKey(int x, Integer k) {
             // TODO Auto-generated method stub
             if(x < array.get(k))
             {

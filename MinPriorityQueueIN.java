@@ -8,6 +8,6 @@ public interface MinPriorityQueueIN<T> {
 	
 	public T ExtractMin();
 	
-	public void DecreaseKey(T x, int k);
+	public void DecreaseKey(int x, T k);
 
 }

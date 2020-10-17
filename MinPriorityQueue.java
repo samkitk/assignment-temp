@@ -26,11 +26,11 @@ public class MinPriorityQueue extends MinHeap implements MinPriorityQueueIN<Inte
 	@Override
 	public Integer ExtractMin() {
             Integer min = null;
-            if(heap_size < 1) System.out.println("Heap Underflow!");
+            if(heap_size-1 < 1) System.out.println("Heap Underflow!");
             else
             {
                 min = array.get(0);
-                array.set(0, array.get(heap_size));
+                array.set(0, array.get(heap_size-1));
                 heap_size--;
                 MinHeapify(array, 0);
             }
@@ -38,7 +38,7 @@ public class MinPriorityQueue extends MinHeap implements MinPriorityQueueIN<Inte
 	}
 
 	@Override
-	public void DecreaseKey(Integer x, int k) {
+	public void DecreaseKey(int x, Integer k) {
             if(x > array.get(k))
             {
                 System.out.println("New Key is larger than current key");
