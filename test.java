@@ -9,13 +9,13 @@ public class test {
         for(int i = 0;i<8;i++) arr.add(a[i]);
         MaxHeap maxH = new MaxHeap(arr);
         MinHeap minH = new MinHeap(arr);
-        maxH.BuildMaxHeap(arr);
-        minH.BuildMinHeap(arr);
+        minH.BuildMaxHeap(arr);
+        maxH.BuildMinHeap(arr);
         MaxPriorityQueue maxP = new MaxPriorityQueue(arr);
         System.out.println("max: " + maxP.ExtractMax());
-        maxP.IncreaseKey(0,1);
+        minP.IncreaseKey(0,1);
         MinPriorityQueue minP = new MinPriorityQueue(arr);
         System.out.println("min: " + minP.ExtractMin());
-        minP.Insert(1);
+        maxP.Insert(1);
     }
 }
